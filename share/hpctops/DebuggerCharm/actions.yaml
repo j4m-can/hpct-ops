@@ -1,0 +1,184 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+#
+# Learn more about actions at: https://juju.is/docs/sdk/actions
+
+# for DebuggerCharm
+debugger-execute:
+  description: Execute code snippet.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    code:
+      type: string
+      description: Code snippet.
+      default: string
+      required: [code]
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+    value-type:
+      type: string
+      description: Value to return (output and error, output only, error only).
+      enum: [full, error, output]
+      default: full
+
+debugger-dump-dirof:
+  description: Dump dir() information of named object.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    name:
+      type: string
+      description: Name of object to dir()
+      default: string
+      required: [name]
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-event:
+  description: Dump event information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-handlers:
+  description: Dump handler information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-host:
+  description: Dump host information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-object:
+  description: Dump object.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    name:
+      type: string
+      description: Name of object to dump
+      default: string
+      required: [name]
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-stored:
+  description: Dump _stored information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-time:
+  description: Dump time information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-typeof:
+  description: Dump type information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    name:
+      type: string
+      description: Name of object to type()
+      default: string
+      required: [name]
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-dump-unit:
+  description: Dump unit information.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result
+
+debugger-trigger-update-status:
+  description: Trigger update status event.
+  params:
+    encoding:
+      type: string
+      description: Result value encoding.
+      enum: [base64, canonical, string]
+      default: string
+    output:
+      type: string
+      description: Where/how to output result.
+      enum: [debug-log, event-log, event-result]
+      default: event-result

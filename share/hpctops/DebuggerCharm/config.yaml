@@ -1,0 +1,11 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+#
+# Learn more about config at: https://juju.is/docs/sdk/config
+
+# for DebuggerCharm
+options:
+  debugger-intercept-handler:
+    type: boolean
+    description: Register intercept handler for observe calls.
+    default: true
